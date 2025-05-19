@@ -1,0 +1,21 @@
+.navbar{
+    border-bottom: 1px solid rgb(230, 230, 230);
+    background: grey;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img{
+        width: auto;
+        height: 60px;
+    }
+    .links{
+        display: flex;
+        gap: 12px;
+        i{
+            font-size: 30px;
+            color: #d2d2d2;
+        }
+    }
+}

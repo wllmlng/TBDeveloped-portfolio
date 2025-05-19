@@ -1,0 +1,16 @@
+.container{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+
+    .imgContainer{
+        display: flex;
+        position: absolute;
+        transition: transform ease 0.5s;
+        img{
+            height: auto;
+            width: 300px;
+        }
+    }
+}

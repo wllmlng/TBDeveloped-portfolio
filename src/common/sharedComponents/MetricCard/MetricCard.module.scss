@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 20px;
+    gap: 12px;
+    color: grey;
+
+    i{
+        margin-left: 4px;
+    }
+
+    .metricContainer{
+        font-size: 28px;
+        font-weight: 600;
+        height: 64px;
+    }
+}

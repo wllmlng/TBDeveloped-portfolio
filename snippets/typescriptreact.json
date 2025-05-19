@@ -1,0 +1,34 @@
+{
+	"cfc": {
+		"description": "Functional component",
+		"prefix": "cfc",
+		"body": [
+			"//External Libraries",
+			"import React from 'react';",
+			"//Api Calls",
+			"",
+			"//Utils",
+			"",
+			"//Hooks",
+			"",
+			"//Components",
+			"",
+			"//Types",
+			"",
+			"//Constants",
+			"",
+			"//Styles",
+			"",
+			"//-----------------End Imports-----------------",
+			"",
+			"interface Props { }",
+			"",
+			"function ${TM_FILENAME_BASE}({}: Props) {",
+			"",
+			"    return (<>${TM_FILENAME_BASE}</>)",
+			"}",
+			"",
+			"export default ${TM_FILENAME_BASE}"
+		]
+	}
+}

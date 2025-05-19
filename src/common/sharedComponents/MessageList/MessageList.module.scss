@@ -1,0 +1,81 @@
+.messageRow{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.statusCode {
+    font-weight: bold;
+}
+
+.path {
+    color: #007bff; 
+}
+
+.error {
+    color: #dc3545; 
+}
+
+.timestamp {
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+
+.gridItem {
+    display: flex;
+    justify-content: space-between; 
+    border-bottom: 1px solid #ddd; 
+    background-color: #f9f9f9; 
+}
+
+.statusCode {
+    font-weight: bold;
+}
+
+.path {
+    color: #007bff; 
+}
+
+.error {
+    color: #dc3545; 
+}
+
+.timestamp {
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+
+.headerRow {
+    display: flex; 
+    font-weight: bold; 
+    background-color: #f0f0f0; 
+    border-bottom: 2px solid #ddd; 
+    padding: 10px 0; 
+}
+
+.headerItem {
+    text-align: center; 
+}
+
+.timestampCell{
+    display: flex;
+    justify-content: flex-end;
+    i{
+        margin-left: 4px;
+    }
+}
+
+.errorCell{
+    display: flex;
+    justify-content: flex-start;   
+}
+.gridItem {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100%; 
+}
