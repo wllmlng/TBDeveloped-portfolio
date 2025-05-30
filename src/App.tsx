@@ -7,6 +7,7 @@ import Todo from './projects/Todo/Todo';
 import NestedCheckboxes from './projects/NestedCheckboxes/NestedCheckboxes';
 import Carousel from './projects/Carousel/Carousel';
 import ApiHealthDashboard from './projects/ApiHealthDashboard/ApiHealthDashboard';
+import EventLogger from './projects/EventLogger/EventLogger'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,6 +31,9 @@ function App() {
                 <li>
                   <Link to="/apiHealthDashboard">ApiHealthDashboard</Link>
                 </li>
+                <li>
+                  <Link to="/eventLogger">EventLogger</Link>
+                </li>
               </ul>
             </nav>
 
@@ -38,6 +42,7 @@ function App() {
               <Route path="/nestedCheckboxes" element={<NestedCheckboxes />} />
               <Route path="/carousel" element={<Carousel />} />
               <Route path="/apiHealthDashboard" element={<ApiHealthDashboard />} />
+              <Route path="/eventLogger" element={<EventLogger />} />
             </Routes>
           </div>
         </Router>
