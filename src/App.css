@@ -56,3 +56,21 @@ nav ul li {
 .read-the-docs {
   color: #888;
 }
+
+.generic-container{
+  background: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 6px;  
+}
+
+.font-light{
+  color: grey;
+}
+
+.sub-title{
+  color: #514e4e;
+  display: flex;
+  font-size: 20px;
+  margin: 0;
+  padding: 12px;
+}
