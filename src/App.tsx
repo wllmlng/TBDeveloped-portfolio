@@ -8,6 +8,8 @@ import NestedCheckboxes from './projects/NestedCheckboxes/NestedCheckboxes';
 import Carousel from './projects/Carousel/Carousel';
 import ApiHealthDashboard from './projects/ApiHealthDashboard/ApiHealthDashboard';
 import EventLogger from './projects/EventLogger/EventLogger'
+import DeepLAutomatedTranslation from './projects/DeepLAutomatedTranslation/DeepLAutomatedTranslation';
+
 import './i18n'
 
 function App() {
@@ -35,6 +37,9 @@ function App() {
                 <li>
                   <Link to="/eventLogger">EventLogger</Link>
                 </li>
+                <li>
+                  <Link to="/deepLAutomatedTranslation">DeepLAutomatedTranslation</Link>
+                </li>
               </ul>
             </nav>
 
@@ -44,6 +49,7 @@ function App() {
               <Route path="/carousel" element={<Carousel />} />
               <Route path="/apiHealthDashboard" element={<ApiHealthDashboard />} />
               <Route path="/eventLogger" element={<EventLogger />} />
+              <Route path="/deepLAutomatedTranslation" element={<DeepLAutomatedTranslation />} />
             </Routes>
           </div>
         </Router>
