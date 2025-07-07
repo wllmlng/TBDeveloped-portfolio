@@ -1,6 +1,8 @@
 //External Libraries
 import  {useMemo, useEffect, useState} from 'react';
 import classNames from 'classnames';
+import { useTranslation } from 'react-i18next'
+
 //Api Calls
 
 //Utils
@@ -45,7 +47,9 @@ function ApiHealthDashboard() {
     const [timedropdown, setTimedropdown] = useState(null);
     const [pathdropdown, setPathdropdown] = useState(null);
     const [statusSelect, setStatusSelect] = useState<StatusSelect>('5xx');
+    const { t } = useTranslation()
 
+console.log('t', t("welcome"))
     useEffect(() =>{
         setLoading(true);
 

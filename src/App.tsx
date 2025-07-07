@@ -8,6 +8,7 @@ import NestedCheckboxes from './projects/NestedCheckboxes/NestedCheckboxes';
 import Carousel from './projects/Carousel/Carousel';
 import ApiHealthDashboard from './projects/ApiHealthDashboard/ApiHealthDashboard';
 import EventLogger from './projects/EventLogger/EventLogger'
+import './i18n'
 
 function App() {
   const [count, setCount] = useState(0)
