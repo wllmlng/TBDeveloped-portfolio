@@ -21,6 +21,10 @@ import { useTranslation } from 'react-i18next'
 
 //-----------------End Imports-----------------
 
+
+//*
+// you can run script npm run scripts/translate-en-to-es.js to generate  the /es folder with the correctly translated spanish file
+//  */
 function DeepLAutomatedTranslation() {
     const { t } = useTranslation()
     const [input, setInput ] = useState('')

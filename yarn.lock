@@ -22,7 +22,7 @@
     form-data-encoder "1.7.2"
     formdata-node "^4.3.2"
     node-fetch "^2.6.7"
-x
+
 "@babel/code-frame@^7.27.1":
   version "7.27.1"
   resolved "https://spanio.jfrog.io/artifactory/api/npm/default-npm/@babel/code-frame/-/code-frame-7.27.1.tgz"
