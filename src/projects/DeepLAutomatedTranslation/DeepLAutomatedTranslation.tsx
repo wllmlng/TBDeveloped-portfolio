@@ -33,7 +33,7 @@ function DeepLAutomatedTranslation() {
 
     const translateText = async (text: string, targetLang: string) => {
         try {
-          const response = await fetch('http://localhost:8000/translate', {
+          const response = await fetch('http://localhost:8000/translate-word', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
