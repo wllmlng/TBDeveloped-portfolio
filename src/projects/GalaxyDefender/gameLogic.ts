@@ -297,9 +297,10 @@ class Ship implements Drawable {
     }
   }
 
-  draw() {
+  draw(currentImage?: HTMLImageElement) {
     if (this.isColliding === false) {
-      this.context.drawImage(this.shipImage, this.x, this.y);
+      const imageToUse = currentImage || this.shipImage;
+      this.context.drawImage(imageToUse, this.x, this.y);
     } else {
       if (this.shipLost === false) {
         this.shipDestroyedAudio.play();
@@ -310,7 +311,7 @@ class Ship implements Drawable {
     }
   }
 
-  move() {
+  move(currentImage?: HTMLImageElement) {
     this.coolDownCounter += 1;
     if (this.isColliding === false) {
       if (KEY_PRESS.left || KEY_PRESS.right || KEY_PRESS.down || KEY_PRESS.up) {
@@ -335,7 +336,7 @@ class Ship implements Drawable {
         }
 
         if (this.isColliding === false) {
-          this.draw();
+          this.draw(currentImage);
         }
       }
     }
@@ -741,8 +742,8 @@ export class Game {
 
     this.background.draw();
     this.ship.accelAnim();
-    this.ship.draw();
-    this.ship.move();
+    this.ship.draw(this.currentShipImage);
+    this.ship.move(this.currentShipImage);
     this.ship.ammoSupply.animateFiring();
 
     this.enemyShip.animateFiring();

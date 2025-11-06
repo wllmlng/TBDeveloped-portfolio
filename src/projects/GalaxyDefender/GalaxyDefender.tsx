@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './GalaxyDefender.module.scss';
 import { Game } from './gameLogic';
+import menuShipImg from '../../assets/galaxydefender/images/ship/PlayerRed_Frame_01_Original.png';
+import toggleOnImg from '../../assets/galaxydefender/audio/control/icons8-toggle-on-48.png';
+import toggleOffImg from '../../assets/galaxydefender/audio/control/icons8-toggle-off-48.png';
 
 const GalaxyDefender = () => {
   const backgroundCanvasRef = useRef<HTMLCanvasElement>(null);
@@ -61,7 +64,7 @@ const GalaxyDefender = () => {
       {!gameStarted && (
         <div className={styles.menu}>
           <img 
-            src="/src/assets/galaxydefender/images/ship/PlayerRed_Frame_01_Original.png" 
+            src={menuShipImg} 
             alt="menu_ship" 
             width="190" 
             height="auto"
@@ -118,10 +121,7 @@ const GalaxyDefender = () => {
             <button type="button" onClick={handleAudioControl}>
               Music
               <img 
-                src={musicMuted 
-                  ? "/src/assets/galaxydefender/audio/control/icons8-toggle-off-48.png"
-                  : "/src/assets/galaxydefender/audio/control/icons8-toggle-on-48.png"
-                }
+                src={musicMuted ? toggleOffImg : toggleOnImg}
                 width="25" 
                 height="auto" 
                 alt="volume control"
