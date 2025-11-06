@@ -9,6 +9,7 @@ import Carousel from './projects/Carousel/Carousel';
 import ApiHealthDashboard from './projects/ApiHealthDashboard/ApiHealthDashboard';
 import EventLogger from './projects/EventLogger/EventLogger'
 import DeepLAutomatedTranslation from './projects/DeepLAutomatedTranslation/DeepLAutomatedTranslation';
+import GalaxyDefender from './projects/GalaxyDefender/GalaxyDefender';
 
 import './i18n'
 
@@ -40,6 +41,9 @@ function App() {
                 <li>
                   <Link to="/deepLAutomatedTranslation">DeepLAutomatedTranslation</Link>
                 </li>
+                <li>
+                  <Link to="/galaxyDefender">GalaxyDefender</Link>
+                </li>
               </ul>
             </nav>
 
@@ -50,6 +54,7 @@ function App() {
               <Route path="/apiHealthDashboard" element={<ApiHealthDashboard />} />
               <Route path="/eventLogger" element={<EventLogger />} />
               <Route path="/deepLAutomatedTranslation" element={<DeepLAutomatedTranslation />} />
+              <Route path="/galaxyDefender" element={<GalaxyDefender />} />
             </Routes>
           </div>
         </Router>
