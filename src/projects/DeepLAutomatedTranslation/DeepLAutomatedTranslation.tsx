@@ -30,7 +30,7 @@ function DeepLAutomatedTranslation() {
     const [input, setInput ] = useState('')
     // const deepLApiKey = import.meta.env.VITE_DEEPL_API
 
-
+console.log('Commit')
     const translateText = async (text: string, targetLang: string) => {
         try {
           const response = await fetch('http://localhost:8000/translate-word', {
