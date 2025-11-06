@@ -41,18 +41,16 @@
 }
 
 .gameContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  width: 800px;
+  height: 650px;
+  margin: 80px auto 0;
 
   canvas {
     position: absolute;
-    top: 450px;
-    bottom: 50px;
-    left: 50%;
+    top: 0;
+    left: 0;
     background: transparent;
-    transform: translate(-50%, -50%);
   }
 }
 
@@ -61,7 +59,7 @@
   background: url('../../assets/galaxydefender/images/background-black.png');
   width: 800px;
   height: 650px;
-  z-index: -2;
+  z-index: 0;
   box-shadow: 0px 2px 10px rgb(2, 207, 2);
   animation: move_background 5s linear infinite;
 }
@@ -76,11 +74,11 @@
 }
 
 .main {
-  z-index: -1;
+  z-index: 1;
 }
 
 .ship {
-  z-index: 0;
+  z-index: 2;
 }
 
 .menu {

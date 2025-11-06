@@ -84,8 +84,8 @@ const GalaxyDefender = () => {
         <canvas 
           ref={backgroundCanvasRef} 
           id="background" 
-          width="360" 
-          height="600"
+          width="800" 
+          height="650"
           className={styles.background}
         />
         <canvas 

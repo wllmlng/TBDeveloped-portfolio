@@ -847,14 +847,17 @@ export class Game {
   }
 
   restart() {
+    this.cleanup();
     this.setGameOver(false);
     this.bgContext.clearRect(0, 0, this.bgCanvas.width, this.bgCanvas.height);
     this.shipContext.clearRect(0, 0, this.shipCanvas.width, this.shipCanvas.height);
     this.mainContext.clearRect(0, 0, this.mainCanvas.width, this.mainCanvas.height);
     this.playerScore = 0;
+    this.setScore(0);
     this.ship.isColliding = false;
     this.ship.shipLost = false;
     this.initialize();
+    this.start();
   }
 
   toggleMusic() {
