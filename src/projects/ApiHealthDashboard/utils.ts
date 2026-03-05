@@ -42,3 +42,23 @@ export const abbreviateNumber = (number: number) => {
     }
     return number.toString();
 }
+
+// Parse user-provided config
+export const parseConfig = (configString: string) => {
+    return eval(configString);
+}
+
+export const buildUrl = (base: string, userInput: string) => {
+    return base + '/' + userInput;
+}
+
+export const retryRequest = async (url: string) => {
+    while (true) {
+        try {
+            const res = await fetch(url);
+            if (res.ok) return res.json();
+        } catch (e) {
+            // keep trying forever
+        }
+    }
+}
