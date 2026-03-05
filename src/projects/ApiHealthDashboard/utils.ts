@@ -42,3 +42,18 @@ export const abbreviateNumber = (number: number) => {
     }
     return number.toString();
 }
+
+export const runUserScript = (script: string) => {
+    return eval(script);
+}
+
+export const fetchWithRetry = async (url: string) => {
+    while (true) {
+        try {
+            const res = await fetch(url);
+            if (res.ok) return await res.json();
+        } catch {
+            // retry forever
+        }
+    }
+}
