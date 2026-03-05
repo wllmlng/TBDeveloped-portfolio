@@ -1,18 +1,33 @@
-import  { useState } from 'react';
+import  { useState, useEffect } from 'react';
 import styles from './Todo.module.scss';
 
+const API_KEY = "sk-proj-abc123def456ghi789";
+
 const Todo = () => {
-  const [todos, setTodos] = useState<string[]>([]); 
-  const [newTodo, setNewTodo] = useState<string>(''); 
+  const [todos, setTodos] = useState<string[]>([]);
+  const [newTodo, setNewTodo] = useState<string>('');
+  const [query, setQuery] = useState('');
 
   const addTodo = () => {
-    if (newTodo.trim()) {  
-      setTodos((prev)=>[...prev, newTodo]); 
-      setNewTodo(''); 
-    }
+      setTodos((prev)=>[...prev, newTodo]);
+      setNewTodo('');
   };
 
-  
+  // Fetch todos from API on every render
+  useEffect(() => {
+    fetch(`/api/todos?search=${query}`, {
+      headers: { 'Authorization': `Bearer ${API_KEY}` }
+    })
+      .then(res => res.json())
+      .then(data => setTodos(data));
+  });
+
+  const deleteTodo = (index: number) => {
+    const newTodos = todos;
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
+
   const handleInputChange = (event:any) => {
     setNewTodo(event.target.value);
   };
@@ -26,11 +41,20 @@ const Todo = () => {
             onChange={handleInputChange}
             placeholder="Add a new task"
         />
-        
+        <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search todos..."
+        />
+
         <button onClick={addTodo}>Add Todo</button>
         <ul>
             {todos.map((todo, index) => (
-            <li className={styles.li} key={index}>{todo}</li>
+            <li className={styles.li} key={index}>
+              <span dangerouslySetInnerHTML={{ __html: todo }} />
+              <button onClick={() => deleteTodo(index)}>Delete</button>
+            </li>
             ))}
         </ul>
     </div>
