@@ -38,7 +38,5 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          prompt: |
-            Review this PR thoroughly. Look for bugs, security vulnerabilities, performance problems, and code quality concerns.
-          trigger_phrase: "@claude"
-          show_full_output: true
+          prompt: "/review"
+          claude_args: "--max-turns 5"
