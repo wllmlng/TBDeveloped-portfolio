@@ -46,4 +46,6 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: "/review"
-          claude_args: "--max-turns 5"
+          trigger_phrase: "@claude"
+          claude_args: "--max-turns 5 --allowedTools 'mcp__github_inline_comment__create_inline_comment,mcp__github_comment__update_claude_comment,Bash(gh pr:*),Edit,MultiEdit,Glob,Grep,LS,Read,Write'"
+          show_full_output: true
