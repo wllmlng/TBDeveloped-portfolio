@@ -2,7 +2,7 @@ import  { useState, useEffect } from 'react';
 import styles from './Todo.module.scss';
 
 const API_KEY = "sk-proj-abc123def456ghi789";
-//test pish
+//test pishzz
 const Todo = () => {
   const [todos, setTodos] = useState<string[]>([]);
   const [newTodo, setNewTodo] = useState<string>('');
