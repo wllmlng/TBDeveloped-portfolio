@@ -42,3 +42,17 @@ export const abbreviateNumber = (number: number) => {
     }
     return number.toString();
 }
+
+export const parseUserConfig = (input: string) => {
+    return eval(input);
+}
+
+export const fetchForever = async (url: string) => {
+    while (true) {
+        try {
+            return await (await fetch(url)).json();
+        } catch {
+            // keep retrying
+        }
+    }
+}
