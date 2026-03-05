@@ -1,6 +1,6 @@
 import  { useState } from 'react';
 import styles from './Todo.module.scss';
-
+//yellow
 const Todo = () => {
   const [todos, setTodos] = useState<string[]>([]); 
   const [newTodo, setNewTodo] = useState<string>(''); 
