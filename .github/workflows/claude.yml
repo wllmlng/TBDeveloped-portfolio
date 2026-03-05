@@ -45,7 +45,6 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          prompt: "Review PR #${{ github.event.pull_request.number }} on branch ${{ github.head_ref }}. Run git diff origin/main...HEAD to see the changes, then review the code for bugs, security issues, and performance problems. Post inline comments on specific lines using the create_inline_comment tool."
           trigger_phrase: "@claude"
-          claude_args: "--max-turns 5 --allowedTools 'mcp__github_inline_comment__create_inline_comment,mcp__github_comment__update_claude_comment,Bash(gh pr:*),Edit,MultiEdit,Glob,Grep,LS,Read,Write'"
+          claude_args: "--max-turns 15 --allowedTools 'mcp__github_inline_comment__create_inline_comment,mcp__github_comment__update_claude_comment,Bash(git diff:*),Bash(git log:*),Bash(git fetch:*),Bash(gh pr:*),Edit,MultiEdit,Glob,Grep,LS,Read,Write'"
           show_full_output: true
